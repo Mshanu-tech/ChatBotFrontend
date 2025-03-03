@@ -12,7 +12,7 @@ function Chatbot() {
         const userMessage = { role: "user", message: input };
         setMessages((prevMessages) => [...prevMessages, userMessage]);
 
-        const response = await axios.post("https://chatbot-f2y2.onrender.com/chat", { message: input });
+        const response = await axios.post("https://backendchatbot-x1dj.onrender.com/chat", { message: input });
         console.log("response", response.data);
 
         const botMessage = { role: "bot", message: response.data.response };
